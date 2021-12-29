@@ -7,7 +7,7 @@ function Contador(props) {
 
     return (
         <MinhaDiv>
-            Contador: {numero} - {props.abc}
+            Contador: <span>{numero} - {props.abc}</span>
             <MeuBotao onClick={() => setNumero(numero + 1)}>Click</MeuBotao>
             {props.children}
         </MinhaDiv>
