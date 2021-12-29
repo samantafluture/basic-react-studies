@@ -1,15 +1,16 @@
 import { useState } from 'react';
-import myStyles from './Contador.module.css';
+import { MinhaDiv } from './Contador.styled';
+import { MeuBotao } from './Contador.styled';
 
 function Contador(props) {
     const [numero, setNumero] = useState(0);
 
     return (
-        <div className={myStyles['meu-contador']}>
+        <MinhaDiv>
             Contador: {numero} - {props.abc}
-            <button onClick={() => setNumero(numero + 1)}>Click</button>
+            <MeuBotao onClick={() => setNumero(numero + 1)}>Click</MeuBotao>
             {props.children}
-        </div>
+        </MinhaDiv>
     );
 }
 
